@@ -2,5 +2,6 @@
 
 import xmlrpclib
 
-a = xmlrpclib.ServerProxy('http://www.pythonchallenge.com/pc/phonebook.php')
-print a.system.listMethods()
+s = xmlrpclib.ServerProxy('http://www.pythonchallenge.com/pc/phonebook.php')
+# print s.system.methodHelp('phone')
+print s.phone('Bert')
